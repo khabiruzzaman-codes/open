@@ -1,6 +1,6 @@
 
 theClock();
-setInterval(theClock,5000) ;
+setInterval(theClock, 5000);
 
 const search = document.querySelector("#search");
 const searchButton = document.querySelector("#searchButton");
@@ -56,8 +56,8 @@ function theClock() {
   const clock = document.querySelector("#clock");
   const exacttime = new Date();
 
-  const hours = exacttime.getHours();
-  const minutes = exacttime.getMinutes();
+  const hours = exacttime.getHours().toString().padStart(2, "0");
+  const minutes = exacttime.getMinutes().toString().padStart(2, "0");
 
   clockDigit.textContent = `${hours}.${minutes}`
 
